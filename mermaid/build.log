@@ -1,0 +1,363 @@
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.02kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:20-alpine
+#2 DONE 0.5s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B 0.0s done
+#3 DONE 0.0s
+
+#4 [ 1/11] FROM docker.io/library/node:20-alpine@sha256:658d0f63e501824d6c23e06d4bb95c71e7d704537c9d9272f488ac03a370d448
+#4 CACHED
+
+#5 [ 2/11] RUN apk add --no-cache git
+#5 0.781 ( 1/13) Installing brotli-libs (1.2.0-r0)
+#5 0.813 ( 2/13) Installing c-ares (1.34.6-r0)
+#5 0.832 ( 3/13) Installing libunistring (1.4.1-r0)
+#5 0.895 ( 4/13) Installing libidn2 (2.3.8-r0)
+#5 0.908 ( 5/13) Installing nghttp2-libs (1.68.0-r0)
+#5 0.917 ( 6/13) Installing nghttp3 (1.13.1-r0)
+#5 0.925 ( 7/13) Installing libpsl (0.21.5-r3)
+#5 0.937 ( 8/13) Installing zstd-libs (1.5.7-r2)
+#5 0.971 ( 9/13) Installing libcurl (8.17.0-r1)
+#5 1.005 (10/13) Installing libexpat (2.7.3-r0)
+#5 1.019 (11/13) Installing pcre2 (10.47-r0)
+#5 1.050 (12/13) Installing git (2.52.0-r0)
+#5 1.337 (13/13) Installing git-init-template (2.52.0-r0)
+#5 1.346 Executing busybox-1.37.0-r30.trigger
+#5 1.353 OK: 23.2 MiB in 31 packages
+#5 DONE 1.5s
+
+#6 [ 3/11] WORKDIR /app
+#6 DONE 0.1s
+
+#7 [ 4/11] RUN apk add --no-cache     chromium     nss     freetype     harfbuzz     ca-certificates     ttf-freefont
+#7 1.110 (  1/182) Installing ca-certificates (20251003-r0)
+#7 1.147 (  2/182) Installing libxau (1.0.12-r0)
+#7 1.161 (  3/182) Installing libmd (1.1.0-r0)
+#7 1.172 (  4/182) Installing libbsd (0.12.2-r0)
+#7 1.185 (  5/182) Installing libxdmcp (1.1.5-r1)
+#7 1.192 (  6/182) Installing libxcb (1.17.0-r1)
+#7 1.222 (  7/182) Installing libx11 (1.8.12-r1)
+#7 1.339 (  8/182) Installing libxext (1.3.6-r2)
+#7 1.366 (  9/182) Installing hwdata-pci (0.401-r0)
+#7 1.402 ( 10/182) Installing libpciaccess (0.18.1-r1)
+#7 1.408 ( 11/182) Installing libdrm (2.4.131-r0)
+#7 1.421 ( 12/182) Installing chromium-angle (143.0.7499.40-r0)
+#7 1.527 ( 13/182) Installing chromium-common (143.0.7499.40-r0)
+#7 1.552 ( 14/182) Installing libbz2 (1.0.8-r6)
+#7 1.562 ( 15/182) Installing libpng (1.6.53-r0)
+#7 1.574 ( 16/182) Installing freetype (2.14.1-r0)
+#7 1.592 ( 17/182) Installing fontconfig (2.17.1-r0)
+#7 1.615 ( 18/182) Installing libfontenc (1.1.8-r0)
+#7 1.621 ( 19/182) Installing mkfontscale (1.2.3-r1)
+#7 1.627 ( 20/182) Installing font-opensans (0_git20210927-r1)
+#7 1.690 ( 21/182) Installing libffi (3.5.2-r0)
+#7 1.697 ( 22/182) Installing libintl (0.24.1-r1)
+#7 1.704 ( 23/182) Installing libeconf (0.8.0-r0)
+#7 1.711 ( 24/182) Installing libblkid (2.41.2-r0)
+#7 1.721 ( 25/182) Installing libmount (2.41.2-r0)
+#7 1.730 ( 26/182) Installing glib (2.86.3-r0)
+#7 1.819 ( 27/182) Installing gobject-introspection (1.86.0-r0)
+#7 1.839 ( 28/182) Installing pkgconf (2.5.1-r0)
+#7 1.851 ( 29/182) Installing hicolor-icon-theme (0.18-r0)
+#7 1.976 ( 30/182) Installing xz-libs (5.8.1-r0)
+#7 1.989 ( 31/182) Installing libxml2 (2.13.9-r0)
+#7 2.013 ( 32/182) Installing shared-mime-info (2.4-r6)
+#7 2.049 ( 33/182) Installing libjpeg-turbo (3.1.2-r0)
+#7 2.070 ( 34/182) Installing libsharpyuv (1.6.0-r0)
+#7 2.078 ( 35/182) Installing libwebp (1.6.0-r0)
+#7 2.108 ( 36/182) Installing tiff (4.7.1-r0)
+#7 2.121 ( 37/182) Installing gdk-pixbuf (2.44.4-r0)
+#7 2.139 ( 38/182) Installing gtk-update-icon-cache (3.24.51-r0)
+#7 2.147 ( 39/182) Installing libxcomposite (0.4.6-r5)
+#7 2.153 ( 40/182) Installing libxfixes (6.0.2-r0)
+#7 2.164 ( 41/182) Installing libxrender (0.9.12-r0)
+#7 2.173 ( 42/182) Installing libxcursor (1.2.3-r0)
+#7 2.183 ( 43/182) Installing libxdamage (1.1.6-r5)
+#7 2.190 ( 44/182) Installing libxi (1.8.2-r0)
+#7 2.200 ( 45/182) Installing libxinerama (1.1.5-r4)
+#7 2.209 ( 46/182) Installing libxrandr (1.5.4-r1)
+#7 2.216 ( 47/182) Installing libatk-1.0 (2.58.3-r0)
+#7 2.227 ( 48/182) Installing dbus-libs (1.16.2-r1)
+#7 2.240 ( 49/182) Installing at-spi2-core-libs (2.58.3-r0)
+#7 2.252 ( 50/182) Installing gdbm (1.26-r0)
+#7 2.271 ( 51/182) Installing mpdecimal (4.0.1-r0)
+#7 2.280 ( 52/182) Installing ncurses-terminfo-base (6.5_p20251123-r0)
+#7 2.293 ( 53/182) Installing libncursesw (6.5_p20251123-r0)
+#7 2.304 ( 54/182) Installing libpanelw (6.5_p20251123-r0)
+#7 2.310 ( 55/182) Installing readline (8.3.1-r0)
+#7 2.320 ( 56/182) Installing sqlite-libs (3.51.1-r0)
+#7 2.357 ( 57/182) Installing python3 (3.12.12-r0)
+#7 2.827 ( 58/182) Installing python3-pycache-pyc0 (3.12.12-r0)
+#7 3.058 ( 59/182) Installing pyc (3.12.12-r0)
+#7 3.058 ( 60/182) Installing python3-pyc (3.12.12-r0)
+#7 3.058 ( 61/182) Installing libxtst (1.2.5-r0)
+#7 3.064 ( 62/182) Installing at-spi2-core (2.58.3-r0)
+#7 3.081 ( 63/182) Installing libatk-bridge-2.0 (2.58.3-r0)
+#7 3.093 ( 64/182) Installing pixman (0.46.4-r0)
+#7 3.110 ( 65/182) Installing cairo (1.18.4-r0)
+#7 3.133 ( 66/182) Installing cairo-gobject (1.18.4-r0)
+#7 3.140 ( 67/182) Installing avahi-libs (0.8-r23)
+#7 3.148 ( 68/182) Installing gmp (6.3.0-r4)
+#7 3.164 ( 69/182) Installing nettle (3.10.2-r0)
+#7 3.187 ( 70/182) Installing libtasn1 (4.20.0-r0)
+#7 3.195 ( 71/182) Installing p11-kit (0.25.5-r2)
+#7 3.213 ( 72/182) Installing gnutls (3.8.11-r0)
+#7 3.262 ( 73/182) Installing cups-libs (2.4.13-r0)
+#7 3.280 ( 74/182) Installing libepoxy (1.5.10-r1)
+#7 3.297 ( 75/182) Installing fribidi (1.0.16-r2)
+#7 3.305 ( 76/182) Installing graphite2 (1.3.14-r6)
+#7 3.313 ( 77/182) Installing harfbuzz (12.2.0-r0)
+#7 3.345 ( 78/182) Installing libxft (2.3.9-r0)
+#7 3.352 ( 79/182) Installing pango (1.56.4-r0)
+#7 3.380 ( 80/182) Installing wayland-libs-client (1.24.0-r0)
+#7 3.389 ( 81/182) Installing wayland-libs-cursor (1.24.0-r0)
+#7 3.396 ( 82/182) Installing wayland-libs-egl (1.24.0-r0)
+#7 3.409 ( 83/182) Installing xkeyboard-config (2.46-r0)
+#7 3.460 ( 84/182) Installing libxkbcommon (1.12.2-r0)
+#7 3.480 ( 85/182) Installing gtk+3.0 (3.24.51-r0)
+#7 3.613 ( 86/182) Installing icu-data-full (76.1-r1)
+#7 4.107 ( 87/182) Installing llvm21-libs (21.1.2-r1)
+#7 6.341 ( 88/182) Installing spirv-tools (1.4.321.0-r1)
+#7 6.405 ( 89/182) Installing libelf (0.194-r0)
+#7 6.414 ( 90/182) Installing libxshmfence (1.3.3-r0)
+#7 6.421 ( 91/182) Installing mesa (25.2.7-r1)
+#7 6.881 ( 92/182) Installing mesa-gbm (25.2.7-r1)
+#7 6.903 ( 93/182) Installing mesa-dri-gallium (25.2.7-r1)
+#7 6.915 ( 94/182) Installing eudev-libs (3.2.14-r6)
+#7 6.924 ( 95/182) Installing libmagic (5.46-r2)
+#7 6.974 ( 96/182) Installing file (5.46-r2)
+#7 6.983 ( 97/182) Installing xprop (1.2.8-r0)
+#7 6.996 ( 98/182) Installing libice (1.1.2-r0)
+#7 7.004 ( 99/182) Installing libuuid (2.41.2-r0)
+#7 7.011 (100/182) Installing libsm (1.2.6-r0)
+#7 7.019 (101/182) Installing libxt (1.3.1-r0)
+#7 7.033 (102/182) Installing libxmu (1.2.1-r0)
+#7 7.042 (103/182) Installing xset (1.2.5-r1)
+#7 7.051 (104/182) Installing xdg-utils (1.2.1-r1)
+#7 7.075 (105/182) Installing libogg (1.3.6-r0)
+#7 7.100 (106/182) Installing libflac (1.4.3-r2)
+#7 7.112 (107/182) Installing alsa-lib (1.2.14-r2)
+#7 7.140 (108/182) Installing libSvtAv1Enc (3.1.2-r0)
+#7 7.312 (109/182) Installing aom-libs (3.13.1-r0)
+#7 7.458 (110/182) Installing libva (2.22.0-r1)
+#7 7.476 (111/182) Installing libvdpau (1.5-r4)
+#7 7.486 (112/182) Installing libvpl (2.15.0-r1)
+#7 7.504 (113/182) Installing ffmpeg-libavutil (8.0.1-r0)
+#7 7.536 (114/182) Installing libdav1d (1.5.2-r0)
+#7 7.586 (115/182) Installing libhwy (1.3.0-r0)
+#7 7.593 (116/182) Installing lcms2 (2.17-r0)
+#7 7.606 (117/182) Installing libjxl (0.11.1-r3)
+#7 7.722 (118/182) Installing lame-libs (3.100-r5)
+#7 7.734 (119/182) Installing opus (1.5.2-r1)
+#7 7.750 (120/182) Installing rav1e-libs (0.8.1-r0)
+#7 7.808 (121/182) Installing glslang-libs (1.4.321.0-r0)
+#7 7.847 (122/182) Installing shaderc (2025.3-r0)
+#7 7.878 (123/182) Installing libgomp (15.2.0-r2)
+#7 7.893 (124/182) Installing soxr (0.1.3-r7)
+#7 7.901 (125/182) Installing ffmpeg-libswresample (8.0.1-r0)
+#7 7.909 (126/182) Installing libtheora (1.2.0-r0)
+#7 7.925 (127/182) Installing libvorbis (1.3.7-r2)
+#7 7.945 (128/182) Installing libvpx (1.15.2-r0)
+#7 8.018 (129/182) Installing libwebpmux (1.6.0-r0)
+#7 8.024 (130/182) Installing x264-libs (0.164.3108-r1)
+#7 8.073 (131/182) Installing numactl (2.0.18-r0)
+#7 8.082 (132/182) Installing x265-libs (4.1-r0)
+#7 8.216 (133/182) Installing xvidcore (1.3.7-r2)
+#7 8.227 (134/182) Installing ffmpeg-libavcodec (8.0.1-r0)
+#7 8.547 (135/182) Installing libudfread (1.2.0-r0)
+#7 8.554 (136/182) Installing libbluray (1.4.0-r0)
+#7 8.564 (137/182) Installing mpg123-libs (1.33.3-r0)
+#7 8.578 (138/182) Installing libopenmpt (0.8.3-r0)
+#7 8.606 (139/182) Installing cjson (1.7.19-r1)
+#7 8.614 (140/182) Installing mbedtls (3.6.5-r0)
+#7 8.638 (141/182) Installing librist (0.2.10-r1)
+#7 8.649 (142/182) Installing libsrt (1.5.3-r1)
+#7 8.676 (143/182) Installing libssh (0.11.3-r0)
+#7 8.698 (144/182) Installing libsodium (1.0.20-r1)
+#7 8.711 (145/182) Installing libzmq (4.3.5-r2)
+#7 8.726 (146/182) Installing ffmpeg-libavformat (8.0.1-r0)
+#7 8.802 (147/182) Installing crc32c (1.1.2-r3)
+#7 8.809 (148/182) Installing double-conversion (3.3.1-r0)
+#7 8.816 (149/182) Installing harfbuzz-subset (12.2.0-r0)
+#7 8.858 (150/182) Installing minizip (1.3.1-r0)
+#7 8.868 (151/182) Installing nspr (4.36-r0)
+#7 8.884 (152/182) Installing nss (3.118.1-r0)
+#7 8.947 (153/182) Installing openh264 (2.6.0-r0)
+#7 8.978 (154/182) Installing libcamera-ipa (0.6.0-r0)
+#7 8.993 (155/182) Installing libunwind (1.8.1-r0)
+#7 9.005 (156/182) Installing yaml (0.2.5-r2)
+#7 9.012 (157/182) Installing libcamera (0.6.0-r0)
+#7 9.048 (158/182) Installing serd-libs (0.32.4-r0)
+#7 9.056 (159/182) Installing zix-libs (0.6.2-r0)
+#7 9.063 (160/182) Installing sord-libs (0.16.18-r0)
+#7 9.069 (161/182) Installing sratom (0.6.18-r0)
+#7 9.082 (162/182) Installing lilv-libs (0.24.26-r0)
+#7 9.100 (163/182) Installing speexdsp (1.2.1-r2)
+#7 9.121 (164/182) Installing libuv (1.51.0-r0)
+#7 9.139 (165/182) Installing roc-toolkit-libs (0.4.0-r1)
+#7 9.172 (166/182) Installing libsndfile (1.2.2-r2)
+#7 9.207 (167/182) Installing abseil-cpp-raw-logging-internal (20250814.1-r0)
+#7 9.215 (168/182) Installing abseil-cpp-strings-internal (20250814.1-r0)
+#7 9.231 (169/182) Installing abseil-cpp-strings (20250814.1-r0)
+#7 9.242 (170/182) Installing webrtc-audio-processing-2 (2.1-r1)
+#7 9.265 (171/182) Installing pipewire-libs (1.4.9-r2)
+#7 9.410 (172/182) Installing libasyncns (0.8-r4)
+#7 9.416 (173/182) Installing libltdl (2.5.4-r2)
+#7 9.423 (174/182) Installing orc (0.4.41-r0)
+#7 9.442 (175/182) Installing tdb-libs (1.4.14-r0)
+#7 9.448 (176/182) Installing libpulse (17.0-r5)
+#7 9.483 (177/182) Installing simdutf (7.5.0-r0)
+#7 9.499 (178/182) Installing libwebpdemux (1.6.0-r0)
+#7 9.511 (179/182) Installing libxslt (1.1.43-r3)
+#7 9.524 (180/182) Installing chromium (143.0.7499.40-r0)
+#7 14.71 (181/182) Installing encodings (1.1.0-r0)
+#7 14.75 (182/182) Installing font-freefont (20120503-r4)
+#7 14.92 Executing busybox-1.37.0-r30.trigger
+#7 14.93 Executing ca-certificates-20251003-r0.trigger
+#7 14.98 Executing fontconfig-2.17.1-r0.trigger
+#7 15.01 Executing mkfontscale-1.2.3-r1.trigger
+#7 15.04 Executing glib-2.86.3-r0.trigger
+#7 15.05 Executing shared-mime-info-2.4-r6.trigger
+#7 15.41 Executing gdk-pixbuf-2.44.4-r0.trigger
+#7 15.42 Executing gtk-update-icon-cache-3.24.51-r0.trigger
+#7 15.47 Executing gtk+3.0-3.24.51-r0.trigger
+#7 15.49 OK: 741.9 MiB in 213 packages
+#7 DONE 16.0s
+
+#8 [ 5/11] RUN git clone https://github.com/hustcc/mcp-mermaid.git /app
+#8 0.277 Cloning into '/app'...
+#8 DONE 0.9s
+
+#9 [ 6/11] RUN npm install --ignore-scripts
+#9 47.10 
+#9 47.10 added 502 packages, and audited 503 packages in 47s
+#9 47.10 
+#9 47.10 96 packages are looking for funding
+#9 47.10   run `npm fund` for details
+#9 47.11 
+#9 47.11 1 critical severity vulnerability
+#9 47.11 
+#9 47.11 To address all issues (including breaking changes), run:
+#9 47.11   npm audit fix --force
+#9 47.11 
+#9 47.11 Run `npm audit` for details.
+#9 47.11 npm notice
+#9 47.11 npm notice New major version of npm available! 10.8.2 -> 11.7.0
+#9 47.11 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.7.0
+#9 47.11 npm notice To update run: npm install -g npm@11.7.0
+#9 47.11 npm notice
+#9 DONE 47.7s
+
+#10 [ 7/11] RUN npm run build
+#10 0.385 
+#10 0.385 > mcp-mermaid@0.4.0 prebuild
+#10 0.385 > rm -rf build/*
+#10 0.385 
+#10 0.390 
+#10 0.390 > mcp-mermaid@0.4.0 build
+#10 0.390 > tsc && tsc-alias -p tsconfig.json
+#10 0.390 
+#10 DONE 3.6s
+
+#11 [ 8/11] RUN addgroup -g 1001 -S mcpuser &&     adduser -S mcpuser -u 1001 -G mcpuser -s /bin/sh
+#11 DONE 0.4s
+
+#12 [ 9/11] RUN chown -R mcpuser:mcpuser /app
+#12 DONE 91.5s
+
+#13 [10/11] RUN npx playwright install chromium 2>&1 | tee /tmp/playwright-install.log
+#13 1.907 BEWARE: your OS is not officially supported by Playwright; downloading fallback build for ubuntu24.04-x64.
+#13 1.909 Downloading Chromium 143.0.7499.4 (playwright build v1200) from https://cdn.playwright.dev/dbazure/download/playwright/builds/chromium/1200/chromium-linux.zip
+#13 2.452 |                                                                                |   0% of 164.7 MiB
+#13 3.760 |■■■■■■■■                                                                        |  10% of 164.7 MiB
+#13 4.305 |■■■■■■■■■■■■■■■■                                                                |  20% of 164.7 MiB
+#13 4.767 |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 164.7 MiB
+#13 5.276 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 164.7 MiB
+#13 5.815 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 164.7 MiB
+#13 6.602 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 164.7 MiB
+#13 7.165 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 164.7 MiB
+#13 7.846 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 164.7 MiB
+#13 8.361 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 164.7 MiB
+#13 8.818 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 164.7 MiB
+#13 17.61 Chromium 143.0.7499.4 (playwright build v1200) downloaded to /home/mcpuser/.cache/ms-playwright/chromium-1200
+#13 17.61 BEWARE: your OS is not officially supported by Playwright; downloading fallback build for ubuntu24.04-x64.
+#13 17.61 Downloading FFMPEG playwright build v1011 from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1011/ffmpeg-linux.zip
+#13 18.02 |                                                                                |   0% of 2.3 MiB
+#13 18.05 |■■■■■■■■                                                                        |  10% of 2.3 MiB
+#13 18.11 |■■■■■■■■■■■■■■■■                                                                |  20% of 2.3 MiB
+#13 18.13 |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 2.3 MiB
+#13 18.16 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 2.3 MiB
+#13 18.20 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 2.3 MiB
+#13 18.23 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 2.3 MiB
+#13 18.25 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 2.3 MiB
+#13 18.27 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 2.3 MiB
+#13 18.29 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 2.3 MiB
+#13 18.32 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 2.3 MiB
+#13 18.49 FFMPEG playwright build v1011 downloaded to /home/mcpuser/.cache/ms-playwright/ffmpeg-1011
+#13 18.49 BEWARE: your OS is not officially supported by Playwright; downloading fallback build for ubuntu24.04-x64.
+#13 18.49 Downloading Chromium Headless Shell 143.0.7499.4 (playwright build v1200) from https://cdn.playwright.dev/dbazure/download/playwright/builds/chromium/1200/chromium-headless-shell-linux.zip
+#13 19.02 |                                                                                |   0% of 109.7 MiB
+#13 20.24 |■■■■■■■■                                                                        |  10% of 109.7 MiB
+#13 20.75 |■■■■■■■■■■■■■■■■                                                                |  20% of 109.7 MiB
+#13 21.24 |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 109.7 MiB
+#13 21.73 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 109.7 MiB
+#13 22.05 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 109.7 MiB
+#13 22.33 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 109.7 MiB
+#13 22.61 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 109.7 MiB
+#13 22.93 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 109.7 MiB
+#13 23.32 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 109.7 MiB
+#13 23.64 |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 109.7 MiB
+#13 29.00 Chromium Headless Shell 143.0.7499.4 (playwright build v1200) downloaded to /home/mcpuser/.cache/ms-playwright/chromium_headless_shell-1200
+#13 29.02 npm notice
+#13 29.02 npm notice New major version of npm available! 10.8.2 -> 11.7.0
+#13 29.02 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.7.0
+#13 29.02 npm notice To update run: npm install -g npm@11.7.0
+#13 29.02 npm notice
+#13 DONE 29.9s
+
+#14 [11/11] RUN npx playwright install --dry-run chromium &&     echo "✓ Playwright browser installed successfully for mcpuser" &&     ls -la /home/mcpuser/.cache/ms-playwright/ &&     find /home/mcpuser/.cache/ms-playwright/ -name "chrome-headless-shell" ||     (echo "ERROR: Playwright browser not found!" && cat /tmp/playwright-install.log && exit 1)
+#14 1.414 browser: chromium version 143.0.7499.4
+#14 1.415   Install location:    /home/mcpuser/.cache/ms-playwright/chromium-1200
+#14 1.415   Download url:        https://cdn.playwright.dev/dbazure/download/playwright/builds/chromium/1200/chromium-linux.zip
+#14 1.416   Download fallback 1: https://playwright.download.prss.microsoft.com/dbazure/download/playwright/builds/chromium/1200/chromium-linux.zip
+#14 1.416   Download fallback 2: https://cdn.playwright.dev/builds/chromium/1200/chromium-linux.zip
+#14 1.416 
+#14 1.416 browser: ffmpeg
+#14 1.416   Install location:    /home/mcpuser/.cache/ms-playwright/ffmpeg-1011
+#14 1.416   Download url:        https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1011/ffmpeg-linux.zip
+#14 1.417   Download fallback 1: https://playwright.download.prss.microsoft.com/dbazure/download/playwright/builds/ffmpeg/1011/ffmpeg-linux.zip
+#14 1.417   Download fallback 2: https://cdn.playwright.dev/builds/ffmpeg/1011/ffmpeg-linux.zip
+#14 1.417 
+#14 1.417 browser: chromium-headless-shell version 143.0.7499.4
+#14 1.417   Install location:    /home/mcpuser/.cache/ms-playwright/chromium_headless_shell-1200
+#14 1.417   Download url:        https://cdn.playwright.dev/dbazure/download/playwright/builds/chromium/1200/chromium-headless-shell-linux.zip
+#14 1.417   Download fallback 1: https://playwright.download.prss.microsoft.com/dbazure/download/playwright/builds/chromium/1200/chromium-headless-shell-linux.zip
+#14 1.418   Download fallback 2: https://cdn.playwright.dev/builds/chromium/1200/chromium-headless-shell-linux.zip
+#14 1.418 
+#14 1.418 browser: ffmpeg
+#14 1.418   Install location:    /home/mcpuser/.cache/ms-playwright/ffmpeg-1011
+#14 1.418   Download url:        https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1011/ffmpeg-linux.zip
+#14 1.419   Download fallback 1: https://playwright.download.prss.microsoft.com/dbazure/download/playwright/builds/ffmpeg/1011/ffmpeg-linux.zip
+#14 1.419   Download fallback 2: https://cdn.playwright.dev/builds/ffmpeg/1011/ffmpeg-linux.zip
+#14 1.419 
+#14 1.441 ✓ Playwright browser installed successfully for mcpuser
+#14 1.443 total 24
+#14 1.443 drwxr-sr-x    6 mcpuser  mcpuser       4096 Jan  8 13:50 .
+#14 1.443 drwxr-sr-x    3 mcpuser  mcpuser       4096 Jan  8 13:49 ..
+#14 1.443 drwxr-sr-x    2 mcpuser  mcpuser       4096 Jan  8 13:49 .links
+#14 1.443 drwxr-sr-x    3 mcpuser  mcpuser       4096 Jan  8 13:50 chromium-1200
+#14 1.443 drwxr-sr-x    3 mcpuser  mcpuser       4096 Jan  8 13:50 chromium_headless_shell-1200
+#14 1.443 drwxr-sr-x    2 mcpuser  mcpuser       4096 Jan  8 13:50 ffmpeg-1011
+#14 1.444 /home/mcpuser/.cache/ms-playwright/chromium_headless_shell-1200/chrome-headless-shell-linux64/chrome-headless-shell
+#14 DONE 1.5s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 5.3s done
+#15 writing image sha256:8de01d534a60163c236f55a832136134817293c43379643b099a703fcce37a56 done
+#15 naming to docker.io/library/mermaid_mcp-mermaid 0.0s done
+#15 DONE 5.3s

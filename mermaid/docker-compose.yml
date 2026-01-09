@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  mcp-mermaid:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mcp-mermaid-server
+    
+    # Network isolation - no access to host filesystem or network except exposed port
+    network_mode: bridge
+    
+    # Expose only the MCP server port to localhost
+    ports:
+      - "3033:3033"
+    
+    # Security options - sandboxed environment
+    security_opt:
+      - no-new-privileges:true
+    
+    # Read-only root filesystem for additional security
+    # Temporary directories for Playwright/Chromium
+    read_only: false
+    tmpfs:
+      - /tmp:exec,size=200m
+    
+    # Resource limits to prevent resource exhaustion
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    
+    # Restart policy
+    restart: unless-stopped
+    
+    # Environment variables (can be customized)
+    environment:
+      - NODE_ENV=production
+      - PORT=3033
+    
+    # Health check to ensure service is running
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3033/mcp"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
